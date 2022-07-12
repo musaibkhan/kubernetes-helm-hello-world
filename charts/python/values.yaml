@@ -5,8 +5,8 @@ replicaCount: 1
 
 image:
   pullPolicy: IfNotPresent
-  repository: codefresh/kubectl
-  tag: 1.14.9
+  repository: gcr.io/heptio-images/ks-guestbook-demo
+  tag: 0.1
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
@@ -14,8 +14,7 @@ fullnameOverride: ""
 service:
   name: python
   type: ClusterIP
-  externalPort: 80
-  internalPort: 5000
+  port: 80
 resources:
   limits:
     cpu: 100m
